@@ -1,0 +1,12 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject"
+      ],
+      "Resource": "arn:aws:s3:::cloudcart-dev-frontend-7cb59d8f/deployment/cloudcart-backend.tar.gz"
+    }
+  ]
+}
