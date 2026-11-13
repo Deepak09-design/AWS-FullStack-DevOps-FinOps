@@ -1,0 +1,80 @@
+{
+  "widgets": [
+    {
+      "type": "metric",
+      "x": 0,
+      "y": 0,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "title": "CloudCart EC2 CPU Utilization",
+        "region": "us-east-1",
+        "period": 300,
+        "metrics": [
+          ["AWS/EC2", "CPUUtilization", "InstanceId", "i-08e044c0335e5a69a"]
+        ],
+        "stat": "Average",
+        "view": "timeSeries"
+      }
+    },
+    {
+      "type": "metric",
+      "x": 12,
+      "y": 0,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "title": "CloudCart Network Traffic",
+        "region": "us-east-1",
+        "period": 300,
+        "metrics": [
+          ["AWS/EC2", "NetworkIn", "InstanceId", "i-08e044c0335e5a69a"],
+          ["AWS/EC2", "NetworkOut", "InstanceId", "i-08e044c0335e5a69a"]
+        ],
+        "stat": "Sum",
+        "view": "timeSeries"
+      }
+    },
+    {
+      "type": "metric",
+      "x": 0,
+      "y": 6,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "title": "CloudCart EC2 Status Checks",
+        "region": "us-east-1",
+        "period": 300,
+        "metrics": [
+          ["AWS/EC2", "StatusCheckFailed", "InstanceId", "i-08e044c0335e5a69a"]
+        ],
+        "stat": "Maximum",
+        "view": "timeSeries",
+        "yAxis": {
+          "left": {
+            "min": 0,
+            "max": 1
+          }
+        }
+      }
+    },
+    {
+      "type": "metric",
+      "x": 12,
+      "y": 6,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "title": "CloudCart EBS Read and Write",
+        "region": "us-east-1",
+        "period": 300,
+        "metrics": [
+          ["AWS/EC2", "EBSReadBytes", "InstanceId", "i-08e044c0335e5a69a"],
+          ["AWS/EC2", "EBSWriteBytes", "InstanceId", "i-08e044c0335e5a69a"]
+        ],
+        "stat": "Sum",
+        "view": "timeSeries"
+      }
+    }
+  ]
+}
